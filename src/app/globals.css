@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #ffffff;
+  --background: #131313;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.container {
+  @apply max-w-[48rem];
+}
+
+@keyframes progressBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@layer utilities {
+  .animate-progressBar {
+    animation: progressBar 2s infinite linear;
+  }
+}
